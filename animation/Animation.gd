@@ -1,5 +1,7 @@
 extends Node
 
+var bullet = preload("res://bullet.tscn")
+
 var state = "standing"
 var timePassed = 0
 var movespeed = 100
@@ -43,15 +45,17 @@ func _input(event):
 		get_node("AnimationPlayer").play()
 
 func _process(delta):
-#	if(state == "stand"):
-#		get_node("AnimationPlayer").queue("stand")
+	if(state == "stand"):
+		get_node("AnimationPlayer").queue("stand")
 	if(state == "running"):
 		if(facing == "right"):
 			get_node("Player").move_local_x(delta*movespeed)
 		if(facing == "left"):
 			get_node("Player").move_local_x(-delta*movespeed)
-#	if(state == "jump"):
-#		get_node("AnimationPlayer").queue("jump")
+	if(state == "jump"):
+		get_node("AnimationPlayer").queue("jump")
+	if Input.is_action_pressed("ui_up"):
+		fire()
 	timePassed += delta
 	if(timePassed >= 1):
 		timePassed -= 1
@@ -63,3 +67,16 @@ func _on_AnimationPlayer_animation_finished(jump):
 	get_node("Player/player_sprite").set_animation("stand")
 	get_node("AnimationPlayer").set_assigned_animation("stand")
 	print("Finished!")
+
+var bulletCount=0
+func fire():
+	bulletCount = bulletCount +1
+	print(str(get_node("Player").get_position_in_parent()))
+#	var bullet_instance = bullet.instance()
+#	bullet_instance.set_name("bullet"+str(bulletCount))
+#	add_child(bullet_instance)
+#	var bullet_pos = get_node("bullet"+str(bulletCount)).get_pos()
+#	bullet_pos.x = get_node("Player").get_pos().x+10
+#	bullet_pos.y = get_node("Player").get_pos().y
+#	get_node("bullet"+str(bulletCount)).set_pos(bullet_pos)
+	
