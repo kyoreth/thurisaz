@@ -7,19 +7,18 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[node name="Node" type="Node"]
+[node name="Node2D" type="Node2D"]
 
-[node name="rock1" type="Sprite" parent="." index="0"]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( 416, 224 )
+position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
-_sections_unfolded = [ "Offset", "Region" ]
+_sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="rock1" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
 
-scale = Vector2( 0.5, 0.5 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -27,23 +26,23 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D" index="0"]
+
+position = Vector2( 7.15256e-07, 8.34465e-07 )
+shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="rock1" index="1"]
+[node name="Sprite2" type="Sprite" parent="." index="1"]
 
-shape = SubResource( 1 )
-
-[node name="rock2" type="Sprite" parent="." index="1"]
-
-position = Vector2( 448, 224 )
+position = Vector2( 48, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 32, 0, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="rock2" index="0"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Sprite2" index="0"]
 
-scale = Vector2( 0.5, 0.5 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -51,24 +50,23 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="rock2" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/StaticBody2D2" index="0"]
 
+position = Vector2( 7.15256e-07, 8.34465e-07 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="rock3" type="Sprite" parent="." index="2"]
+[node name="Sprite3" type="Sprite" parent="." index="2"]
 
-position = Vector2( 480, 224 )
+position = Vector2( 80, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 64, 0, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="rock3" index="0"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Sprite3" index="0"]
 
-scale = Vector2( 0.5, 0.5 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -76,24 +74,23 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="rock3" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite3/StaticBody2D2" index="0"]
 
+position = Vector2( 7.15256e-07, 8.34465e-07 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="rock4" type="Sprite" parent="." index="3"]
+[node name="Sprite4" type="Sprite" parent="." index="3"]
 
-position = Vector2( 512, 224 )
+position = Vector2( 112, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 96, 0, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="rock4" index="0"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Sprite4" index="0"]
 
-scale = Vector2( 0.5, 0.5 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -101,24 +98,23 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="rock4" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite4/StaticBody2D2" index="0"]
 
+position = Vector2( 7.15256e-07, 8.34465e-07 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="cobble1" type="Sprite" parent="." index="4"]
+[node name="Sprite5" type="Sprite" parent="." index="4"]
 
-position = Vector2( 544, 224 )
+position = Vector2( 144, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 128, 0, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="cobble1" index="0"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Sprite5" index="0"]
 
-scale = Vector2( 0.5, 0.5 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -126,24 +122,23 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="cobble1" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite5/StaticBody2D2" index="0"]
 
+position = Vector2( 7.15256e-07, 8.34465e-07 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="cobble2" type="Sprite" parent="." index="5"]
+[node name="Sprite6" type="Sprite" parent="." index="5"]
 
-position = Vector2( 576, 224 )
+position = Vector2( 176, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 160, 0, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="cobble2" index="0"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Sprite6" index="0"]
 
-scale = Vector2( 0.5, 0.5 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -151,11 +146,10 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="cobble2/StaticBody2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite6/StaticBody2D2" index="0"]
 
-scale = Vector2( 2, 2 )
+position = Vector2( 7.15256e-07, 8.34465e-07 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
