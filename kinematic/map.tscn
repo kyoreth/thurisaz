@@ -7,7 +7,7 @@
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
-position = Vector2( 0, 250 )
+position = Vector2( 0, 750 )
 mode = 0
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 50, 50 )
@@ -24,11 +24,37 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 196612, 2, 0, 196613, 1, 0, 196614, 1, 0, 196615, 3, 0, 262144, 0, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 1, 0, 262153, 1, 0 )
+tile_data = PoolIntArray( -655358, 1, 0, -655357, 1, 0, -655356, 1, 0, -655355, 1, 0, -458742, 1, 0, -458741, 1, 0, -262139, 1, 0, -262138, 1, 0, -262137, 1, 0, -131072, 1, 0, -131057, 1, 0, -65536, 0, 0, -65525, 1, 0, -65524, 1, 0, -65521, 0, 0, 0, 0, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 15, 0, 0, 65536, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 1, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196612, 2, 0, 196613, 1, 0, 196614, 1, 0, 196615, 3, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 1, 0, 262147, 1, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 0, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="KinematicBody2D" parent="." index="1" instance=ExtResource( 2 )]
+[node name="KinematicBody2D" parent="TileMap" index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 288.649, 233.741 )
+position = Vector2( 309.255, -88.8888 )
+
+[node name="Viewport" type="Viewport" parent="." index="1"]
+
+arvr = false
+size = Vector2( 0, 0 )
+own_world = false
+world = null
+transparent_bg = false
+msaa = 0
+hdr = true
+disable_3d = false
+usage = 2
+debug_draw = 0
+render_target_v_flip = false
+render_target_clear_mode = 0
+render_target_update_mode = 2
+audio_listener_enable_2d = false
+audio_listener_enable_3d = false
+physics_object_picking = false
+gui_disable_input = false
+gui_snap_controls_to_pixels = true
+shadow_atlas_size = 0
+shadow_atlas_quad_0 = 2
+shadow_atlas_quad_1 = 2
+shadow_atlas_quad_2 = 3
+shadow_atlas_quad_3 = 4
 
 
