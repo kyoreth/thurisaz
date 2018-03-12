@@ -45,10 +45,10 @@ func _physics_process(delta):
 	if airborne:
 		velocity.y += delta * GRAVITY
 		
-		if Input.is_action_pressed("ui_left") and not walk_direction == "right":
+		if Input.is_action_pressed("ui_left"): #and not walk_direction == "right":
 			walk_direction = "left"
 			velocity.x = -WALK_SPEED
-		elif Input.is_action_pressed("ui_right") and not walk_direction == "left":
+		elif Input.is_action_pressed("ui_right"): #and not walk_direction == "left":
 			walk_direction = "right"
 			velocity.x = WALK_SPEED
 	
