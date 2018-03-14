@@ -12,7 +12,7 @@ extents = Vector2( 32, 32 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." index="0"]
 
-position = Vector2( 80, 48 )
+position = Vector2( 144, 260 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -59,7 +59,10 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196609, 5, 0, 262146, 3, 0, 327683, 2, 0, 327684, 2, 0, 327685, 2, 0 )
-_sections_unfolded = [ "Cell", "Collision" ]
+tile_data = PoolIntArray( 786433, 5, 0, 851969, 5, 0, 917505, 5, 0, 983041, 5, 0, 1048577, 5, 0, 1048582, 4, 0, 1048584, 3, 0, 1048586, 2, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 
