@@ -17,26 +17,26 @@ func _input(event):
 		state = "standing"
 		get_node("Player/player_sprite").set_animation("stand")
 		get_node("AnimationPlayer").set_assigned_animation("stand")
-	
+
 	if(event.is_action_released("ui_left") and facing == "left"):
 		state = "standing"
 		get_node("Player/player_sprite").set_animation("stand")
 		get_node("AnimationPlayer").set_assigned_animation("stand")
-	
+
 	if(event.is_action_pressed("ui_right")):
 		state = "running"
 		facing = "right"
 		get_node("Player/player_sprite").set_flip_h(false)
 		get_node("Player/player_sprite").set_animation("run")
 		get_node("AnimationPlayer").set_assigned_animation("run")
-	
+
 	if(event.is_action_pressed("ui_left")):
 		state = "running"
 		facing = "left"
 		get_node("Player/player_sprite").set_flip_h(true)
 		get_node("Player/player_sprite").set_animation("run")
 		get_node("AnimationPlayer").set_assigned_animation("run")
-	
+
 	if(event.is_action_pressed("ui_space")):
 		state = "jumping"
 		get_node("Player/player_sprite").set_animation("jump")
@@ -79,4 +79,4 @@ func fire():
 #	bullet_pos.x = get_node("Player").get_pos().x+10
 #	bullet_pos.y = get_node("Player").get_pos().y
 #	get_node("bullet"+str(bulletCount)).set_pos(bullet_pos)
-	
+

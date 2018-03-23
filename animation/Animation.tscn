@@ -1,24 +1,24 @@
 [gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Animation.gd" type="Script" id=1]
-[ext_resource path="res://stand0.png" type="Texture" id=2]
-[ext_resource path="res://stand1.png" type="Texture" id=3]
-[ext_resource path="res://stand2.png" type="Texture" id=4]
-[ext_resource path="res://stand3.png" type="Texture" id=5]
-[ext_resource path="res://run0.png" type="Texture" id=6]
-[ext_resource path="res://run1.png" type="Texture" id=7]
-[ext_resource path="res://run2.png" type="Texture" id=8]
-[ext_resource path="res://run3.png" type="Texture" id=9]
-[ext_resource path="res://run4.png" type="Texture" id=10]
-[ext_resource path="res://run5.png" type="Texture" id=11]
-[ext_resource path="res://jump0.png" type="Texture" id=12]
-[ext_resource path="res://jump1.png" type="Texture" id=13]
-[ext_resource path="res://jump2.png" type="Texture" id=14]
-[ext_resource path="res://jump3.png" type="Texture" id=15]
-[ext_resource path="res://jump4.png" type="Texture" id=16]
-[ext_resource path="res://jump5.png" type="Texture" id=17]
-[ext_resource path="res://jump6.png" type="Texture" id=18]
-[ext_resource path="res://jump7.png" type="Texture" id=19]
+[ext_resource path="res://jump0.png" type="Texture" id=2]
+[ext_resource path="res://jump1.png" type="Texture" id=3]
+[ext_resource path="res://jump2.png" type="Texture" id=4]
+[ext_resource path="res://jump3.png" type="Texture" id=5]
+[ext_resource path="res://jump4.png" type="Texture" id=6]
+[ext_resource path="res://jump5.png" type="Texture" id=7]
+[ext_resource path="res://jump6.png" type="Texture" id=8]
+[ext_resource path="res://jump7.png" type="Texture" id=9]
+[ext_resource path="res://stand0.png" type="Texture" id=10]
+[ext_resource path="res://stand1.png" type="Texture" id=11]
+[ext_resource path="res://stand2.png" type="Texture" id=12]
+[ext_resource path="res://stand3.png" type="Texture" id=13]
+[ext_resource path="res://run0.png" type="Texture" id=14]
+[ext_resource path="res://run1.png" type="Texture" id=15]
+[ext_resource path="res://run2.png" type="Texture" id=16]
+[ext_resource path="res://run3.png" type="Texture" id=17]
+[ext_resource path="res://run4.png" type="Texture" id=18]
+[ext_resource path="res://run5.png" type="Texture" id=19]
 [ext_resource path="res://icon.png" type="Texture" id=20]
 
 [sub_resource type="Animation" id=1]
@@ -38,18 +38,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Player/player_sprite:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.4, 1, 1.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 201.769, 232.285 ), Vector2( 201.769, 232.285 ), Vector2( 201.769, 96.6553 ), Vector2( 201.769, 232.285 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -92,23 +80,23 @@ tracks/0/keys = {
 [sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "stand",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "run",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 20, 36 )
@@ -116,14 +104,14 @@ extents = Vector2( 20, 36 )
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 100, 10 )
+extents = Vector2( 100, 5 )
 
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 32, 32 )
 
-[node name="Surge" type="Node" index="0"]
+[node name="Animation" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -201,11 +189,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="1"]
 
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
+[node name="Ground" type="StaticBody2D" parent="." index="3"]
 
-position = Vector2( 200.914, 273.062 )
+position = Vector2( 209.914, 254.062 )
+scale = Vector2( 0.872312, 1 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -214,11 +203,22 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" index="0"]
 
 shape = SubResource( 6 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="RigidBody2D2" type="RigidBody2D" parent="." index="4"]
+[node name="Line2D" type="Line2D" parent="Ground" index="1"]
+
+points = PoolVector2Array( -100, 0, 100, 0 )
+width = 10.0
+default_color = Color( 0.4, 0.5, 1, 1 )
+texture_mode = 655463
+sharp_limit = 2.0
+round_precision = 8
+_sections_unfolded = [ "Capping", "Transform" ]
+
+[node name="LogoBlock" type="RigidBody2D" parent="." index="4"]
 
 position = Vector2( 244.915, 161.443 )
 input_pickable = false
@@ -240,13 +240,14 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LogoBlock" index="0"]
 
 shape = SubResource( 7 )
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D2" index="1"]
+[node name="Sprite" type="Sprite" parent="LogoBlock" index="1"]
 
 texture = ExtResource( 20 )
+_sections_unfolded = [ "Region", "Transform" ]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
